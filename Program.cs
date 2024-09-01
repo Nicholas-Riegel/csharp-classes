@@ -45,20 +45,32 @@
 
 // CLASSES
 
-Console.WriteLine("Enter your name.");
-string name = Console.ReadLine() ?? "";
+// Console.WriteLine("Enter your name.");
+// string name = Console.ReadLine() ?? "";
 
-Console.WriteLine("Enter your age.");
-int age = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter your age.");
+// int age = Convert.ToInt32(Console.ReadLine());
 
-PersonClass person03 = new (name, age);
+// PersonClass person03 = new (name, age);
 
-if (!string.IsNullOrEmpty(person03.name))
-{
-    Console.WriteLine($"Name: {person03.name}");
-}
+// if (!string.IsNullOrEmpty(person03.name))
+// {
+//     Console.WriteLine($"Name: {person03.name}");
+// }
 
-if (person03.age > -1)
-{
-    Console.WriteLine($"Age: {person03.age}");
-}
+// if (person03.age > -1)
+// {
+//     Console.WriteLine($"Age: {person03.age}");
+// }
+
+// CLASS FUNCTIONS
+// PersonClass person = new("Aba", 34);
+
+// // person.name = "Harry";
+// // person.age = 4;
+// person.SetName("Harry");
+// person.SetAge(4);
+
+// Console.WriteLine(person.ReturnDetails());
+
+// CLASS PROPERTIES

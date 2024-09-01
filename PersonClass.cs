@@ -4,27 +4,37 @@ namespace classes_01;
 
 public class PersonClass
 {
-    public string? name;
-    public int age;
+    string name;
+    int age;
 
-    // can give it more than one constructor (overloading)
-    public PersonClass()
-    {
-    }
-    public PersonClass(string name)
-    {
-        this.name = name;
-        this.age = -1;
-
-    }
-    public PersonClass(int age)
-    {
-        this.name = "";
-        this.age = age;
-    }
     public PersonClass(string name, int age)
     {
         this.name = name;
         this.age = age;
+    }
+
+    public void SetName(string name)
+    {
+        this.name = !string.IsNullOrEmpty(name) ? name : "Invalid Name";
+    }
+
+    public string GetName() 
+    {
+        return name;
+    }
+
+    public void SetAge(int age)
+    {
+        this.age = age >= 0 && age < 150 ? age : -1;
+    }
+
+    public int GetAge()
+    {
+        return age;
+    }
+
+    public string ReturnDetails()
+    {
+        return $"Name: {name}\nAge: {age}.";
     }
 }

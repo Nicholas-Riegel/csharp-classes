@@ -75,5 +75,10 @@ public class PersonClass
         // return $"Name: {name}\nAge: {age}.";
         return $"Name: {Name}\nAge: {Age}.";
     }
+
+    public override string ToString()
+    {
+        return $"Name: {Name}\nAge: {Age}.";
+    }
 }
 

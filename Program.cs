@@ -79,4 +79,5 @@ PersonClass person = new("Aba", 34);
 person.Name = "Harry"; // don't have to specify get or set
 
 // Console.WriteLine(person.ReturnDetails());
-Console.WriteLine($"Your name is {person.Name} and your age is {person.Age}");
+// Console.WriteLine($"Your name is {person.Name} and your age is {person.Age}");
+Console.WriteLine(person);

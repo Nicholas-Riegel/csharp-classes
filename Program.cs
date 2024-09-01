@@ -13,10 +13,10 @@
 // static PersonStruct ReturnPerson()
 // {
 //     PersonStruct person;
-//     System.Console.WriteLine("Enter your name.");
+//     Console.WriteLine("Enter your name.");
 //     person.name = Console.ReadLine() ?? "";
     
-//     System.Console.WriteLine("Enter your age.");
+//     Console.WriteLine("Enter your age.");
 //     person.age = Convert.ToInt32(Console.ReadLine());
 
 //     return person;
@@ -24,21 +24,41 @@
 
 // PersonStruct person02 = ReturnPerson();
 
-// System.Console.WriteLine($"{person02.name} - {person02.age}");
+// Console.WriteLine($"{person02.name} - {person02.age}");
 
 // 3. constructors
 
-static PersonStruct ReturnPerson()
-{
-    System.Console.WriteLine("Enter your name.");
-    string name = Console.ReadLine() ?? "";
+// static PersonStruct ReturnPerson()
+// {
+//     Console.WriteLine("Enter your name.");
+//     string name = Console.ReadLine() ?? "";
     
-    System.Console.WriteLine("Enter your age.");
-    int age = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("Enter your age.");
+//     int age = Convert.ToInt32(Console.ReadLine());
 
-    return new PersonStruct(name, age);
+//     return new PersonStruct(name, age);
+// }
+
+// PersonStruct person02 = ReturnPerson();
+
+// Console.WriteLine($"{person02.name} - {person02.age}");
+
+// CLASSES
+
+Console.WriteLine("Enter your name.");
+string name = Console.ReadLine() ?? "";
+
+Console.WriteLine("Enter your age.");
+int age = Convert.ToInt32(Console.ReadLine());
+
+PersonClass person03 = new (name, age);
+
+if (!string.IsNullOrEmpty(person03.name))
+{
+    Console.WriteLine($"Name: {person03.name}");
 }
 
-PersonStruct person02 = ReturnPerson();
-
-System.Console.WriteLine($"{person02.name} - {person02.age}");
+if (person03.age > -1)
+{
+    Console.WriteLine($"Age: {person03.age}");
+}
